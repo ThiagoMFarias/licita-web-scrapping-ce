@@ -1,0 +1,14 @@
+# Ambiente virtual (cada pessoa recria o seu com `uv sync` ou `pip install -r requirements.txt`)
+.venv/
+
+# Cache do Python (recriado automaticamente)
+__pycache__/
+*.pyc
+
+# Dados gerados pelos scripts (saída, não código)
+*.csv
+*.json
+*.jsonl
+
+# ...exceto a configuração do VS Code (aponta para a .venv; sem dados pessoais)
+!.vscode/settings.json
