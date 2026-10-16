@@ -1,0 +1,10 @@
+[browser]
+# não envia estatísticas de uso para o Streamlit
+gatherUsageStats = false
+
+[server]
+# só este computador acessa o painel (sem isso, qualquer um na mesma rede abriria pelo IP)
+address = "localhost"
+
+[theme]
+base = "light"

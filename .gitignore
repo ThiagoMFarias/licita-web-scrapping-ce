@@ -9,6 +9,8 @@ __pycache__/
 *.csv
 *.json
 *.jsonl
+*.xlsx
+*.ods
 
 # ...exceto a configuração do VS Code (aponta para a .venv; sem dados pessoais)
 !.vscode/settings.json

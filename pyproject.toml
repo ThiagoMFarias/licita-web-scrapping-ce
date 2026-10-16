@@ -7,4 +7,7 @@ dependencies = [
     "requests>=2.31",
     "beautifulsoup4>=4.12",
     "truststore>=0.9",
+    "streamlit>=1.65.0",
+    "plotly>=7.1.0",
+    "pandas>=2.3.3",
 ]

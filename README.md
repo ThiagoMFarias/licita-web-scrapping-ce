@@ -90,6 +90,34 @@ falhas, esse arquivo é apagado.
 Execuções seguintes também reaproveitam o `finalizadas.json` existente, então
 rodar de novo dias depois baixa só as cotações finalizadas novas.
 
+## Painel de análise (BI): `bi.py`
+
+```
+streamlit run bi.py
+```
+
+Abre no navegador (http://localhost:8501) um painel interativo sobre o `finalizadas.csv`
+(somente leitura; o arquivo não é alterado). Os filtros da barra lateral (período, busca,
+produto, especificação, marca, fornecedor, órgão) valem para todas as abas:
+
+| Aba | Responde |
+|---|---|
+| 🏆 Fornecedores | Quem mais ganhou (cotações, itens, valor), desconto médio, marcas e produtos de cada um |
+| 📦 Itens | O que mais saiu (vezes, quantidade, valor), com preço médio/mín./máx. |
+| 🏷️ Marcas | Marcas mais usadas e, para uma marca, em que produtos aparece, quem ofertou e a que preço |
+| 🔗 Relações | Cruzamento de dois campos quaisquer (ex.: Fornecedor × Marca, Produto × Marca, Órgão × Fornecedor) |
+| 📈 Preços | Preço de um item ao longo do tempo e comparação de preço entre marcas |
+| 📄 Dados | Tabela filtrada, com download em CSV |
+
+Itens podem ser vistos em três níveis:
+
+- **Produto**: só o nome (`SACO PARA LIXO`), junta todos os tamanhos;
+- **Especificação**: produto + capacidade + cor + embalagem
+  (`SACO PARA LIXO · 100 L · PRETO · PACOTE 100 UN`), o nível certo para comparar preço;
+- **Descrição completa**: o texto exato do catálogo.
+
+Marcas escritas de formas diferentes (`Absolut`, `ABSOLUT`) são unificadas.
+
 ## Comportamento do site (e como o script lida com ele)
 
 - **Horário de funcionamento:** fora do horário, o site responde "Serviço
